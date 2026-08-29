@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Realm Chronicles AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <div id="game-container">
+        <!-- Map Section: Clean, lightweight country shapes -->
+        <div id="map-section">
+            <svg viewBox="0 0 1000 500" xmlns="http://w3.org">
+                <!-- North America -->
+                <path id="US" name="United States" d="M 100,100 L 250,100 L 250,220 L 100,220 Z" />
+                <path id="CA" name="Canada" d="M 100,30 L 280,30 L 250,100 L 100,100 Z" />
+                <!-- Europe / Asia -->
+                <path id="GB" name="Great Britain" d="M 420,100 L 450,100 L 440,130 L 410,130 Z" />
+                <path id="FR" name="France" d="M 420,150 L 460,150 L 450,190 L 410,190 Z" />
+                <path id="DE" name="Germany" d="M 460,140 L 500,140 L 500,180 L 460,180 Z" />
+                <path id="RU" name="Russia" d="M 500,80 L 850,50 L 880,180 L 500,180 Z" />
+                <path id="CN" name="China" d="M 650,200 L 800,200 L 780,320 L 600,300 Z" />
+                <!-- South America & Africa & Australia -->
+                <path id="BR" name="Brazil" d="M 250,300 L 350,320 L 320,450 L 220,400 Z" />
+                <path id="ZA" name="South Africa" d="M 480,350 L 550,350 L 530,480 L 460,450 Z" />
+                <path id="AU" name="Australia" d="M 750,360 L 900,360 L 880,480 L 730,460 Z" />
+            </svg>
+        </div>
+
+        <!-- Sidebar Section -->
+        <div id="control-section">
+            <h1 id="game-title">✨ Realm Chronicles AI</h1>
+            
+            <div id="country-card">
+                <h3>Selected Realm: <span id="selected-country-name">None</span></h3>
+                <p><span id="country-status">Click a country on the map to view its faction lore.</span></p>
+                <button id="btn-select-country" disabled>Rule this Realm</button>
+            </div>
+
+            <div id="action-card" class="hidden">
+                <h3>Issue Edicts for Turn <span id="turn-number">1</span></h3>
+                <textarea id="player-action-input" placeholder="Type your commands (e.g., 'Form a pact with Drakon Citadel and march armies east')"></textarea>
+                <button id="btn-submit-turn">Cast Edict</button>
+            </div>
+
+            <div id="history-log-card">
+                <h3>The Age of Legends Log</h3>
+                <div id="log-output">The realms are quiet. Awaiting your ascension...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
