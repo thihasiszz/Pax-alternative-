@@ -1,4 +1,16 @@
-function simulateTurnWithAI(country, actions, currentWorldState) {
+
+window.onload = function() {
+    svgPanZoom('svg', {
+        zoomEnabled: true,
+        controlIconsEnabled: false, // Hides ugly +/- buttons so it stays clean
+        fit: true,
+        center: true,
+        minZoom: 0.5,
+        maxZoom: 10,
+        mouseWheelZoomEnabled: true // Lets desktop players scroll wheel zoom
+    });
+};
+     function simulateTurnWithAI(country, actions, currentWorldState) {
     const actionLower = actions.toLowerCase();
     
     // 1. Lists of immersive fantasy event logs to generate dynamic results
